@@ -93,7 +93,7 @@ body{
 }
 .ex-8-img:hover{
     border-radius: 20px;
-    filter: grayscale(0.7);
+    filter: saturate(0.5);
 }
 
    
@@ -101,12 +101,12 @@ body{
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
-    transition: all 1s ease-out;
+    transition: all 1.5s ease-out;
 }
 
 .ex-9-img:hover{
     border-radius: 20px;
-    filter: grayscale(0.7);
+    filter: grayscale(0.5) sepia(0.5);
     width: 600px;
     margin: -6.8px 0px;
 }
@@ -144,17 +144,18 @@ body{
 }
 
 @keyframes half-spin {
-    25%{
-        transform: rotate(135deg);
+    30%{
+        transform: rotate(105deg);
     }
-    50%{
-        transform: rotate(225deg);
+    60%{
+        transform: rotate(210deg);
     }
-    75%{
+    90%{
         transform: rotate(315deg);
     }
 }
 
+                /* Exercise n.12 and 13 */
 
 
 .ex-12-button, .ex-13-button {
@@ -185,4 +186,90 @@ body{
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+                    /* Exercise n.12 */
+
+
+.ex-12-button:hover .ex-12-top-white{
+    animation: wow 2s linear;
+}
+
+@keyframes wow {
+    50%{
+        left:calc(100% - 60px);
+    }
+    100%{
+        left:10%;
+    } 
+}
+.ex-12-button:hover .ex-12-bottom-white{
+    animation: hey 2s linear;
+}
+
+@keyframes hey {
+    50%{
+        right:calc(100% - 60px);
+    }
+    100%{
+        right:20%;
+    }
+    
+}
+
+
+                    /* Exercise n.13 */
+.ex-13-button:hover .ex-13-top-white{
+    animation: lol 2s linear;
+}
+
+@keyframes lol {
+    25%{
+        left:calc(100% - 30px);
+        top: -10px;
+    }
+    50%{
+        left:calc(100% - 30px);
+        top:100%;
+    }
+    75%{
+        left:-10%;
+        top:100%;
+
+    }
+    95%{
+        left:-10%;
+        top:-10px;
+    } 
+    100%{
+        left:10%;
+        top:-10px;
+    } 
+}
+.ex-13-button:hover .ex-13-bottom-white{
+    animation: ciao 2s linear;
+}
+
+@keyframes ciao {
+    25%{
+        right:calc(100% - 50px);
+        bottom: -10px;
+    }
+    50%{
+        right:calc(100% - 50px);
+        bottom:100%;
+    }
+    75%{
+        right:-10%;
+        bottom:100%;
+
+    }
+    95%{
+        right:-10%;
+        bottom:-10px;
+    } 
+    100%{
+        right:10%;
+        bottom:-10px;
+    } 
 }
