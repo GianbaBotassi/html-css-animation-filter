@@ -81,30 +81,82 @@ body{
 
                     /* Exercise n.7 */
 .ex-7-img{
-    transition: all 1s ease-in
+    transition: all 1s ease-in;
 }
 .ex-7-img:hover{
     filter: grayscale(1) brightness(1.2);
 }
 
                     /* Exercise n.8 */
+.ex-8-img{
+    transition: all 1s ease-in;
+}
+.ex-8-img:hover{
+    border-radius: 20px;
+    filter: grayscale(0.7);
+}
 
-
-
-
-
-
-
+   
+                    /* Exercise n.9 */
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: all 1s ease-out;
 }
+
+.ex-9-img:hover{
+    border-radius: 20px;
+    filter: grayscale(0.7);
+    width: 600px;
+    margin: -6.8px 0px;
+}
+
+                    /* Excercise n.10 */
 .ex-10-icon {
     font-size: 60px;
+    animation: spin 1s linear infinite;
 }
+
+@keyframes spin {
+    25%{
+        transform: rotate(-90deg);
+    }
+    50%{
+        transform: rotate(-180deg);
+    }
+    75%{
+        transform: rotate(-270deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+
+                    /* Exercise n.11 */
+
 .ex-11-icon {
     font-size: 60px;
+
 }
+.ex-11-icon:hover{
+    animation: half-spin 2s linear;
+}
+
+@keyframes half-spin {
+    25%{
+        transform: rotate(135deg);
+    }
+    50%{
+        transform: rotate(225deg);
+    }
+    75%{
+        transform: rotate(315deg);
+    }
+}
+
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
